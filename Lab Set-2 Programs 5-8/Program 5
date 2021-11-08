@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Enter a number : "
+read n
+a=1
+
+while [ $n -gt 0 ]
+do
+a=$((a*n))
+n=$((n-1))
+done
+
+echo "Factorial is $a"
+
+
