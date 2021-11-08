@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Enter two numbers : "
+read a
+read b
+
+vala=`expr $a + $b`
+valb=`expr $a - $b`
+valc=`expr $a \* $b`
+vald=$(echo "scale=4; $a / $b "|bc)
+
+echo "Addition = $vala"
+echo "Subtraction = $valb"
+echo "Multiplication = $valc"
+echo "Division = $vald"
