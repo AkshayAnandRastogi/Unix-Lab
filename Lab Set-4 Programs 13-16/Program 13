@@ -1,1 +1,31 @@
-xz
+#!/bin/bash
+
+for (( i=1;i<=6;i=i+1 ))
+do
+echo "Enter CIE and SEE marks of subject $i :"
+read cie
+read see
+marks=$((cie+see))
+
+case $marks in 
+100) echo "You got S grade in subject $i" ;;
+9[0-9]) echo "You got S grade in subject $i" ;;
+8[0-9]) echo "You got A grade in subject $i" ;;
+7[0-9]) echo "You got B grade in subject $i" ;;
+6[0-9]) echo "You got C grade in subject $i" ;;
+5[0-9]) echo "You got D grade in subject $i" ;;
+4[0-9]) echo "You got E grade in subject $i" ;;
+3[0-9]) echo "You got F grade in subject $i" ;;
+2[0-9]) echo "You got F grade in subject $i" ;;
+1[0-9]) echo "You got F grade in subject $i" ;;
+[0-9]) echo "You got F grade in subject $i" ;;
+*) echo "not valid marks " ;;
+esac
+if [ $marks -gt 40 ]; then
+countp=$((countp+1))
+else
+countf=$((countf+1))
+fi
+done
+echo "$countp subjects passed." 
+echo "$countf subjects failed." 
