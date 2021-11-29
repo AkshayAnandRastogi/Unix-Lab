@@ -1,0 +1,16 @@
+#!/bin/sh
+echo "enter the year"
+read year
+val1=`expr $year % 400`
+val2=`expr $year % 100`
+val3=`expr $year % 4`
+
+if [ $val1 -eq 0 ]; then
+echo "Leap Year"
+elif [ $val2 -eq 0 ]; then
+echo "Not a leap Year";
+elif [ $val3 -eq 0 ]; then
+echo "Leap Year"
+else
+echo "Not a leap year";
+fi
