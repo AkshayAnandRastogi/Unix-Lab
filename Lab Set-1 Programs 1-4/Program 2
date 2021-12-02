@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Enter the radius :"
+read r
+pi=3.1415
+area=$(echo "scale=4; pi \* $r \* $r" |bc)
+echo "$area"
